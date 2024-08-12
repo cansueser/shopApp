@@ -7,11 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+final class HomeViewController: UIViewController {
+    //MARK: -variables
+    
+    @IBOutlet weak var testLabel: UILabel!
+    //MARK: -function
     override func viewDidLoad() {
         super.viewDidLoad()
         print("hello")
+        testLabel.text = "hello"
     }
 
 
