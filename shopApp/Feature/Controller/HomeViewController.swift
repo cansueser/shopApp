@@ -9,15 +9,21 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     //MARK: -variables
+        
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var logoImageView: UIImageView!
     
-    @IBOutlet weak var testLabel: UILabel!
+  
+    
     //MARK: -function
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
         print("hello")
-        testLabel.text = "hello"
     }
 
 
+    
 }
 
