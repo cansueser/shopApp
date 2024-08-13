@@ -16,17 +16,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Fvk-l3-7dx">
-                                <rect key="frame" x="0.0" y="253" width="393" height="565"/>
+                                <rect key="frame" x="15" y="253" width="363" height="565"/>
                                 <color key="backgroundColor" red="0.97131830450000001" green="0.95874017479999996" blue="0.88617342710000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="100" id="bKe-aT-Z4y" customClass="ProductTableViewCell" customModule="shopApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                        <rect key="frame" x="0.0" y="50" width="363" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bKe-aT-Z4y" id="Aue-vE-1Q1">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="363" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ijz-o9-x5R">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ijz-o9-x5R">
                                                     <rect key="frame" x="20" y="5" width="90" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="Ijc-5C-ZoI"/>
@@ -41,15 +41,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtO-55-mm9">
-                                                    <rect key="frame" x="239" y="54" width="143.66666666666663" height="34.333333333333343"/>
-                                                    <color key="tintColor" red="0.78178256749999997" green="0.65498250719999995" blue="0.21370360259999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="cart" catalog="system" title="Sepete Ekle"/>
-                                                    <connections>
-                                                        <action selector="cartButtonClicked:" destination="bKe-aT-Z4y" eventType="touchUpInside" id="PhR-6o-pwo"/>
-                                                    </connections>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsE-9D-3YM">
                                                     <rect key="frame" x="131" y="11" width="231" height="32"/>
                                                     <constraints>
@@ -59,12 +50,21 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtO-55-mm9">
+                                                    <rect key="frame" x="220" y="54" width="143.66666666666663" height="34.333333333333343"/>
+                                                    <color key="tintColor" red="0.78178256749999997" green="0.65498250719999995" blue="0.21370360259999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="cart" catalog="system" title="Sepete Ekle"/>
+                                                    <connections>
+                                                        <action selector="cartButtonClicked:" destination="bKe-aT-Z4y" eventType="touchUpInside" id="PhR-6o-pwo"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="BtO-55-mm9" firstAttribute="top" secondItem="IsE-9D-3YM" secondAttribute="bottom" constant="11" id="Daf-TO-rho"/>
                                                 <constraint firstItem="IsE-9D-3YM" firstAttribute="leading" secondItem="Ijz-o9-x5R" secondAttribute="trailing" constant="21" id="HQL-a8-Hhc"/>
                                                 <constraint firstItem="Ijz-o9-x5R" firstAttribute="centerY" secondItem="Aue-vE-1Q1" secondAttribute="centerY" id="NPu-wP-Psw"/>
-                                                <constraint firstItem="BtO-55-mm9" firstAttribute="leading" secondItem="S2U-1m-ZRn" secondAttribute="trailing" constant="27" id="NQe-ez-skH"/>
+                                                <constraint firstItem="BtO-55-mm9" firstAttribute="leading" secondItem="S2U-1m-ZRn" secondAttribute="trailing" constant="8" id="NQe-ez-skH"/>
                                                 <constraint firstItem="S2U-1m-ZRn" firstAttribute="centerY" secondItem="BtO-55-mm9" secondAttribute="centerY" id="TFW-lb-76N"/>
                                                 <constraint firstItem="Ijz-o9-x5R" firstAttribute="top" secondItem="Aue-vE-1Q1" secondAttribute="topMargin" constant="-6" id="UGL-PD-JJh"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="BtO-55-mm9" secondAttribute="bottom" constant="0.66666666666665719" id="Uku-bA-0fM"/>
@@ -96,10 +96,10 @@
                             <constraint firstItem="Fvk-l3-7dx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8fI-As-W0X"/>
                             <constraint firstItem="CbQ-Do-0sA" firstAttribute="centerX" secondItem="Fvk-l3-7dx" secondAttribute="centerX" id="N2f-zD-CX5"/>
                             <constraint firstItem="CbQ-Do-0sA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="X9K-If-p7F"/>
-                            <constraint firstItem="Fvk-l3-7dx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bq0-i0-ZWS"/>
+                            <constraint firstItem="Fvk-l3-7dx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="bq0-i0-ZWS"/>
                             <constraint firstItem="CbQ-Do-0sA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hxb-gX-tYd"/>
                             <constraint firstItem="Fvk-l3-7dx" firstAttribute="top" secondItem="CbQ-Do-0sA" secondAttribute="bottom" constant="22" id="uMa-t8-ch8"/>
-                            <constraint firstAttribute="trailing" secondItem="Fvk-l3-7dx" secondAttribute="trailing" id="yRe-dS-uKb"/>
+                            <constraint firstAttribute="trailing" secondItem="Fvk-l3-7dx" secondAttribute="trailing" constant="15" id="yRe-dS-uKb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home Screen" id="xA9-JE-f89"/>
@@ -111,6 +111,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1031.2977099236641" y="3.5211267605633805"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="8Xr-Lm-Cbz">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="nL7-db-ADU" customClass="DetailViewController" customModule="shopApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mdv-bU-YLB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZFL-kl-gaR"/>
+                        <color key="backgroundColor" red="0.97131830450000001" green="0.95874017479999996" blue="0.88617342710000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcF-uv-JOW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753" y="4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C0I-GR-Nwk">

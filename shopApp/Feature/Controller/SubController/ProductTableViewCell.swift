@@ -18,6 +18,8 @@ class ProductTableViewCell: UITableViewCell {
     @IBOutlet weak var cartButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
+        productImageView.layer.cornerRadius = 18
+        self.layer.cornerRadius = 18
     }
 
  
