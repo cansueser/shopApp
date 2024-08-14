@@ -14,12 +14,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return products.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProductTableViewCell
-        cell.priceLabel.text = "100tl"
-        cell.productNameLabel.text = "Adidas ayakkabı"
+        let product = products[indexPath.section]
+        cell.priceLabel.text = String(product.price)
+        cell.productNameLabel.text = product.title
         cell.productImageView.image = UIImage(named: "ayakkabi")
   
         return cell
