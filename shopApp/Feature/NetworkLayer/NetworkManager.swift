@@ -6,7 +6,19 @@
 //
 
 import Foundation
+import Alamofire
 
-class NetworkManager {
+final class NetworkManager {
+    func request<T : Codable>(url : URL, method : HTTPMethod, completion : @escaping(Result<T, AFError>)->Void){
+        AF.request(url,method:method).responseDecodable(of: T.self){
+            response in
+            switch response.result{
+            case .success(let value):
+                completion(.success(value))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
     
 }
