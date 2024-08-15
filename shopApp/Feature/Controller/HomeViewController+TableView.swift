@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import Kingfisher
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -20,10 +19,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProductTableViewCell
         let product = products[indexPath.section]
-        cell.priceLabel.text = "\(product.price)$"
-        cell.productNameLabel.text = product.title
-        cell.productImageView.kf.setImage(with: URL(string: product.image))
-  
+        cell.mainConfigration(title: product.title, price: product.price, imageURL: product.image)
         return cell
     }
     
@@ -41,6 +37,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailVC = storyboard.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
+        detailVC.product = products[indexPath.section]
         navigationController?.pushViewController(detailVC, animated: true)
     }
     

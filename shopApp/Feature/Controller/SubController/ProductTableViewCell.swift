@@ -6,11 +6,11 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProductTableViewCell: UITableViewCell {
 
     @IBOutlet weak var productImageView: UIImageView!
-    
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var productNameLabel: UILabel!
     
@@ -26,6 +26,12 @@ class ProductTableViewCell: UITableViewCell {
     @IBAction func cartButtonClicked(_ sender: Any) {
         print("tıklandı")
     }
-    
+    func mainConfigration(title: String, price: Double, imageURL: String) {
+        productNameLabel.text = title
+        priceLabel.text = "\(price)$"
+        productImageView.kf.indicatorType = .activity
+        productImageView.kf.setImage(with: URL(string: imageURL))
+        
+    }
     
 }

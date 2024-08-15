@@ -136,7 +136,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="tDU-je-kbZ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -150,14 +150,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="desc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKh-IG-RzD">
-                                        <rect key="frame" x="8" y="121.99999999999999" width="377" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="desc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKh-IG-RzD">
+                                        <rect key="frame" x="8" y="121.99999999999999" width="377" height="19.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdB-3K-p74">
-                                        <rect key="frame" x="8" y="241.33333333333337" width="370" height="60"/>
+                                        <rect key="frame" x="8" y="309" width="370" height="60"/>
                                         <color key="backgroundColor" red="0.96957427259999995" green="0.81601947549999998" blue="0.27570116519999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="33b-2B-Q31"/>
@@ -180,9 +180,9 @@
                                     <constraint firstItem="dIR-6L-Ruz" firstAttribute="trailing" secondItem="FJe-gB-tEt" secondAttribute="trailingMargin" id="EuT-ba-ACb"/>
                                     <constraint firstItem="dIR-6L-Ruz" firstAttribute="leading" secondItem="lKh-IG-RzD" secondAttribute="leading" id="TPW-Ti-bGU"/>
                                     <constraint firstItem="dIR-6L-Ruz" firstAttribute="leading" secondItem="FJe-gB-tEt" secondAttribute="leadingMargin" id="aSn-KT-mZT"/>
+                                    <constraint firstAttribute="bottom" secondItem="bdB-3K-p74" secondAttribute="bottom" constant="50" id="ekp-qc-YOA"/>
                                     <constraint firstAttribute="trailing" secondItem="bdB-3K-p74" secondAttribute="trailing" constant="15" id="gVE-nt-QfS"/>
                                     <constraint firstItem="lKh-IG-RzD" firstAttribute="top" secondItem="6t5-cT-VAY" secondAttribute="bottom" constant="25" id="iCL-rd-Vko"/>
-                                    <constraint firstItem="bdB-3K-p74" firstAttribute="top" secondItem="lKh-IG-RzD" secondAttribute="bottom" constant="99.000000000000057" id="jIj-j3-0Gc"/>
                                 </constraints>
                             </view>
                         </subviews>
