@@ -33,26 +33,17 @@
                                                         <constraint firstAttribute="width" constant="90" id="Ijc-5C-ZoI"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2U-1m-ZRn">
-                                                    <rect key="frame" x="131" y="51" width="81" height="40.333333333333343"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="81" id="7Fz-Ri-F5R"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsE-9D-3YM">
-                                                    <rect key="frame" x="131" y="11" width="231" height="32"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsE-9D-3YM">
+                                                    <rect key="frame" x="131" y="11" width="231" height="46"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="231" id="YU1-cp-XgH"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtO-55-mm9">
-                                                    <rect key="frame" x="220" y="54" width="143.66666666666663" height="34.333333333333343"/>
+                                                    <rect key="frame" x="218" y="57" width="143.66666666666663" height="34.333333333333343"/>
                                                     <color key="tintColor" red="0.78178256749999997" green="0.65498250719999995" blue="0.21370360259999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="cart" catalog="system" title="Sepete Ekle"/>
@@ -60,18 +51,27 @@
                                                         <action selector="cartButtonClicked:" destination="bKe-aT-Z4y" eventType="touchUpInside" id="PhR-6o-pwo"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2U-1m-ZRn">
+                                                    <rect key="frame" x="129" y="54" width="81" height="40.333333333333343"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="81" id="7Fz-Ri-F5R"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="BtO-55-mm9" firstAttribute="top" secondItem="IsE-9D-3YM" secondAttribute="bottom" constant="11" id="Daf-TO-rho"/>
+                                                <constraint firstItem="BtO-55-mm9" firstAttribute="top" secondItem="IsE-9D-3YM" secondAttribute="bottom" id="Daf-TO-rho"/>
                                                 <constraint firstItem="IsE-9D-3YM" firstAttribute="leading" secondItem="Ijz-o9-x5R" secondAttribute="trailing" constant="21" id="HQL-a8-Hhc"/>
                                                 <constraint firstItem="Ijz-o9-x5R" firstAttribute="centerY" secondItem="Aue-vE-1Q1" secondAttribute="centerY" id="NPu-wP-Psw"/>
                                                 <constraint firstItem="BtO-55-mm9" firstAttribute="leading" secondItem="S2U-1m-ZRn" secondAttribute="trailing" constant="8" id="NQe-ez-skH"/>
                                                 <constraint firstItem="S2U-1m-ZRn" firstAttribute="centerY" secondItem="BtO-55-mm9" secondAttribute="centerY" id="TFW-lb-76N"/>
                                                 <constraint firstItem="Ijz-o9-x5R" firstAttribute="top" secondItem="Aue-vE-1Q1" secondAttribute="topMargin" constant="-6" id="UGL-PD-JJh"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="BtO-55-mm9" secondAttribute="bottom" constant="0.66666666666665719" id="Uku-bA-0fM"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="BtO-55-mm9" secondAttribute="bottom" constant="-2.3333333333333428" id="Uku-bA-0fM"/>
                                                 <constraint firstItem="Ijz-o9-x5R" firstAttribute="leading" secondItem="Aue-vE-1Q1" secondAttribute="leadingMargin" id="cYu-nP-end"/>
-                                                <constraint firstItem="IsE-9D-3YM" firstAttribute="leading" secondItem="S2U-1m-ZRn" secondAttribute="leading" id="if4-Rn-vX8"/>
-                                                <constraint firstItem="S2U-1m-ZRn" firstAttribute="top" secondItem="IsE-9D-3YM" secondAttribute="bottom" constant="8" symbolic="YES" id="jcs-A2-ydM"/>
+                                                <constraint firstItem="IsE-9D-3YM" firstAttribute="leading" secondItem="S2U-1m-ZRn" secondAttribute="leading" constant="2" id="if4-Rn-vX8"/>
+                                                <constraint firstItem="S2U-1m-ZRn" firstAttribute="top" secondItem="IsE-9D-3YM" secondAttribute="bottom" constant="-3" id="jcs-A2-ydM"/>
                                                 <constraint firstItem="IsE-9D-3YM" firstAttribute="top" secondItem="Aue-vE-1Q1" secondAttribute="topMargin" id="tqG-Em-z6n"/>
                                             </constraints>
                                         </tableViewCellContentView>
