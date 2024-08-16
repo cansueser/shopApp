@@ -12,8 +12,10 @@ final class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var logoImageView: UIImageView!
-    var products : [Product] = []
     
+    @IBOutlet weak var categorySegment: UISegmentedControl!
+    var products : [Product] = []
+    var filteredProducts : [Product] = []
     
     //MARK: -function
     override func viewDidLoad() {
@@ -31,6 +33,7 @@ final class HomeViewController: UIViewController {
                 switch result{
                 case .success(let value):
                     self.products = value
+                    self.filteredProducts = self.products
                     self.tableView.reloadData()
                 case .failure(let error):
                     print(error)
@@ -39,6 +42,31 @@ final class HomeViewController: UIViewController {
         }
     }
     
+    @IBAction func categorySegmentClicked(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            filterProduct(category: "all")
+        case 1:
+            filterProduct(category: "men's clothing")
+        case 2:
+            filterProduct(category: "women's clothing")
+        case 3:
+            filterProduct(category: "jewelery")
+        case 4:
+            filterProduct(category: "electronics")
+        default:
+            print("error")
+        }
+    }
+    func filterProduct(category: String) {
+        if category == "all" {
+            filteredProducts = products
+        }
+        else {
+            filteredProducts = products.filter{$0.category == category}
+        }
+        tableView.reloadData()
+    }
     
 }
 

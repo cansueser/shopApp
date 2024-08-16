@@ -14,11 +14,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return products.count
+        return filteredProducts.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProductTableViewCell
-        let product = products[indexPath.section]
+        let product = filteredProducts[indexPath.section]
         cell.mainConfigration(title: product.title, price: product.price, imageURL: product.image)
         return cell
     }
@@ -37,7 +37,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailVC = storyboard.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
-        detailVC.product = products[indexPath.section]
+        detailVC.product = filteredProducts[indexPath.section]
         navigationController?.pushViewController(detailVC, animated: true)
     }
     
