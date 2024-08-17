@@ -382,8 +382,8 @@
                                     <action selector="checkOutButtonClicked:" destination="bCE-XM-oZa" eventType="touchUpInside" id="174-72-Gwe"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Toplam Tutar:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuA-23-SxM">
-                                <rect key="frame" x="117" y="676" width="158" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toplam Tutar:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuA-23-SxM">
+                                <rect key="frame" x="16" y="692" width="361" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -394,15 +394,15 @@
                         <constraints>
                             <constraint firstItem="wcv-83-xdz" firstAttribute="top" secondItem="iZF-mS-ARA" secondAttribute="bottom" constant="8" id="9l8-Ae-2nb"/>
                             <constraint firstItem="bjm-DZ-o3Q" firstAttribute="bottom" secondItem="N2b-GU-sxw" secondAttribute="bottom" constant="28" id="Eui-s4-4Zk"/>
-                            <constraint firstItem="zuA-23-SxM" firstAttribute="top" secondItem="wcv-83-xdz" secondAttribute="bottom" constant="22" id="Nos-Jx-Eyb"/>
+                            <constraint firstItem="zuA-23-SxM" firstAttribute="top" secondItem="wcv-83-xdz" secondAttribute="bottom" constant="38" id="Nos-Jx-Eyb"/>
                             <constraint firstItem="iZF-mS-ARA" firstAttribute="leading" secondItem="wcv-83-xdz" secondAttribute="leading" id="VAd-X9-KnF"/>
                             <constraint firstItem="bjm-DZ-o3Q" firstAttribute="trailing" secondItem="wcv-83-xdz" secondAttribute="trailing" constant="14" id="WXD-mb-1nD"/>
                             <constraint firstItem="iZF-mS-ARA" firstAttribute="leading" secondItem="2vN-O6-thw" secondAttribute="leadingMargin" id="Zlx-Tu-VpI"/>
                             <constraint firstItem="iZF-mS-ARA" firstAttribute="top" secondItem="bjm-DZ-o3Q" secondAttribute="top" constant="18" id="bjN-fH-kJn"/>
                             <constraint firstItem="N2b-GU-sxw" firstAttribute="leading" secondItem="bjm-DZ-o3Q" secondAttribute="leading" constant="81" id="gNU-C9-Tfq"/>
-                            <constraint firstItem="zuA-23-SxM" firstAttribute="leading" secondItem="bjm-DZ-o3Q" secondAttribute="leading" constant="117" id="vKo-YZ-VZe"/>
+                            <constraint firstItem="zuA-23-SxM" firstAttribute="leading" secondItem="bjm-DZ-o3Q" secondAttribute="leading" constant="16" id="vKo-YZ-VZe"/>
                             <constraint firstItem="zuA-23-SxM" firstAttribute="centerX" secondItem="2vN-O6-thw" secondAttribute="centerX" id="wJU-pn-YgO"/>
-                            <constraint firstItem="N2b-GU-sxw" firstAttribute="top" secondItem="zuA-23-SxM" secondAttribute="bottom" constant="24" id="wjy-fc-xlW"/>
+                            <constraint firstItem="N2b-GU-sxw" firstAttribute="top" secondItem="zuA-23-SxM" secondAttribute="bottom" constant="8" id="wjy-fc-xlW"/>
                             <constraint firstItem="wcv-83-xdz" firstAttribute="centerX" secondItem="N2b-GU-sxw" secondAttribute="centerX" id="zSQ-Tc-4nJ"/>
                         </constraints>
                     </view>

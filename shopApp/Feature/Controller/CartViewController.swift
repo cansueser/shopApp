@@ -23,6 +23,8 @@ final class CartViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
+       let total = cartProduct.reduce(0) {$0 + $1.price}
+        totalLabel.text = "Toplam tutar: \(total)$"
     }
     @IBAction func checkOutButtonClicked(_ sender: UIButton) {
     }
