@@ -14,6 +14,7 @@
 		7E1C37422C6A2CED00E857FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E1C37412C6A2CED00E857FE /* Assets.xcassets */; };
 		7E1C37452C6A2CED00E857FE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7E1C37442C6A2CED00E857FE /* Base */; };
 		7E28382D2C71011C0097DD1F /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E28382C2C71011C0097DD1F /* CartViewController.swift */; };
+		7E28382F2C710BA30097DD1F /* CartViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E28382E2C710BA30097DD1F /* CartViewController+TableView.swift */; };
 		7E69CC842C6CEE6A007317A6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7E69CC832C6CEE6A007317A6 /* Alamofire */; };
 		7E69CC882C6CF672007317A6 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E69CC872C6CF672007317A6 /* NetworkHelper.swift */; };
 		7E69CC8A2C6CF854007317A6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E69CC892C6CF854007317A6 /* Product.swift */; };
@@ -34,6 +35,7 @@
 		7E1C37442C6A2CED00E857FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E1C37462C6A2CED00E857FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E28382C2C71011C0097DD1F /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		7E28382E2C710BA30097DD1F /* CartViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartViewController+TableView.swift"; sourceTree = "<group>"; };
 		7E69CC872C6CF672007317A6 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		7E69CC892C6CF854007317A6 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		7E8E357F2C6BA0D000F74C43 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				7EA5A75A2C6A3B5C00BC7FF1 /* HomeViewController+TableView.swift */,
 				7E8E357F2C6BA0D000F74C43 /* DetailViewController.swift */,
 				7E28382C2C71011C0097DD1F /* CartViewController.swift */,
+				7E28382E2C710BA30097DD1F /* CartViewController+TableView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				7EA5A7592C6A320800BC7FF1 /* NetworkManager.swift in Sources */,
 				7E28382D2C71011C0097DD1F /* CartViewController.swift in Sources */,
 				7E69CC8A2C6CF854007317A6 /* Product.swift in Sources */,
+				7E28382F2C710BA30097DD1F /* CartViewController+TableView.swift in Sources */,
 				7E1C373D2C6A2CEB00E857FE /* HomeViewController.swift in Sources */,
 				7E1C37392C6A2CEB00E857FE /* AppDelegate.swift in Sources */,
 				7EA5A75B2C6A3B5C00BC7FF1 /* HomeViewController+TableView.swift in Sources */,

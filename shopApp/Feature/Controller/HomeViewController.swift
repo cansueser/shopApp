@@ -17,9 +17,14 @@ final class HomeViewController: UIViewController {
     var products : [Product] = []
     var filteredProducts : [Product] = []
     var rightButton : UIBarButtonItem?
+    var cartVC : CartViewController?
     //MARK: -function
     override func viewDidLoad() {
         super.viewDidLoad()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+        cartVC = storyboard.instantiateViewController(identifier: "CartViewController")
+
         tableView.dataSource = self
         tableView.delegate = self
         print("hello")
@@ -30,12 +35,16 @@ final class HomeViewController: UIViewController {
     }
     
     @objc func cartButtonClicked() {
-       print("tıklandı")
-        
+        if let cartVC = cartVC {
+            navigationController?.pushViewController(cartVC, animated: true)
+        }
     }
-    @objc func cartAddButtonClicked() {
-        print("sepete eklendi")
+    @objc func cartAddButtonClicked(sender : UIButton) {
+        let sectionIndex = sender.tag
         rightButton!.image = UIImage(systemName: "cart.fill")
+        if let cartVC = cartVC {
+            cartVC.cartProduct.append(products[sectionIndex])
+        }
     }
     
     func fetchProducts() {

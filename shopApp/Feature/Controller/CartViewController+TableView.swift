@@ -1,27 +1,25 @@
 //
-//  HomeViewController+TableView.swift
+//  CartViewController+TableView.swift
 //  shopApp
 //
-//  Created by CANSU on 12.08.2024.
+//  Created by CANSU on 17.08.2024.
 //
 
 import Foundation
 import UIKit
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+extension CartViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
         
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return filteredProducts.count
+        return cartProduct.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProductTableViewCell
-        let product = filteredProducts[indexPath.section]
+        let product = cartProduct[indexPath.section]
         cell.mainConfigration(title: product.title, price: product.price, imageURL: product.image)
-        cell.cartButton.tag = indexPath.section
-        cell.cartButton.addTarget(self, action: #selector(cartAddButtonClicked), for: .touchUpInside)
         return cell
     }
     
@@ -35,12 +33,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let footerView = UIView()
         footerView.backgroundColor = .clear
         return footerView
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let detailVC = storyboard.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
-        detailVC.product = filteredProducts[indexPath.section]
-        navigationController?.pushViewController(detailVC, animated: true)
     }
     
 }
