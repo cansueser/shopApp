@@ -47,9 +47,6 @@
                                                     <color key="tintColor" red="0.78178256749999997" green="0.65498250719999995" blue="0.21370360259999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="cart" catalog="system" title="Sepete Ekle"/>
-                                                    <connections>
-                                                        <action selector="cartButtonClicked:" destination="bKe-aT-Z4y" eventType="touchUpInside" id="PhR-6o-pwo"/>
-                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2U-1m-ZRn">
                                                     <rect key="frame" x="129" y="54" width="81" height="40.333333333333343"/>

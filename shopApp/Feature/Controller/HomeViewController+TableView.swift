@@ -20,6 +20,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProductTableViewCell
         let product = filteredProducts[indexPath.section]
         cell.mainConfigration(title: product.title, price: product.price, imageURL: product.image)
+        cell.cartButton.addTarget(self, action: #selector(cartAddButtonClicked), for: .touchUpInside)
         return cell
     }
     

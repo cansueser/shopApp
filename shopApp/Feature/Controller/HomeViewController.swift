@@ -16,7 +16,7 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var categorySegment: UISegmentedControl!
     var products : [Product] = []
     var filteredProducts : [Product] = []
-    
+    var rightButton : UIBarButtonItem?
     //MARK: -function
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,18 @@ final class HomeViewController: UIViewController {
         tableView.delegate = self
         print("hello")
         fetchProducts()
-   
+        rightButton = UIBarButtonItem(image: UIImage(systemName: "cart"), style: .plain, target: self, action: #selector(cartButtonClicked))
+        self.navigationItem.rightBarButtonItem = rightButton
+        
+    }
+    
+    @objc func cartButtonClicked() {
+       print("tıklandı")
+        
+    }
+    @objc func cartAddButtonClicked() {
+        print("sepete eklendi")
+        rightButton!.image = UIImage(systemName: "cart.fill")
     }
     
     func fetchProducts() {

@@ -21,11 +21,7 @@ class ProductTableViewCell: UITableViewCell {
         productImageView.layer.cornerRadius = 18
         self.layer.cornerRadius = 18
     }
-
- 
-    @IBAction func cartButtonClicked(_ sender: Any) {
-        print("tıklandı")
-    }
+    
     func mainConfigration(title: String, price: Double, imageURL: String) {
         productNameLabel.text = title
         priceLabel.text = "\(price)$"
