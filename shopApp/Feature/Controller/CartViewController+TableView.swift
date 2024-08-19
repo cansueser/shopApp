@@ -34,5 +34,12 @@ extension CartViewController : UITableViewDelegate,UITableViewDataSource {
         footerView.backgroundColor = .clear
         return footerView
     }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            cartProduct.remove(at: indexPath.section)
+            tableView.deleteSections(IndexSet(integer: indexPath.section), with: .automatic)
+            totalPrice()
+        }
+    }
     
 }
