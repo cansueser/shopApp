@@ -40,6 +40,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailVC = storyboard.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
         detailVC.product = filteredProducts[indexPath.section]
+        detailVC.cartVC = cartVC
         navigationController?.pushViewController(detailVC, animated: true)
     }
     

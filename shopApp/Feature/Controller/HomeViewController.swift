@@ -43,7 +43,12 @@ final class HomeViewController: UIViewController {
         let sectionIndex = sender.tag
         rightButton!.image = UIImage(systemName: "cart.fill")
         if let cartVC = cartVC {
-            cartVC.cartProduct.append(products[sectionIndex])
+            let check = cartVC.hasIn(product: products[sectionIndex])
+            if check {
+                print("Zaten ekli")
+            }else {
+                print("ürün eklendi")
+            }
         }
     }
     

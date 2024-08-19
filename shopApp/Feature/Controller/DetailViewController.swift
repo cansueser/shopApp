@@ -26,6 +26,7 @@ final class DetailViewController: UIViewController {
     
     @IBOutlet weak var rateCountLabel: UILabel!
     var product : Product?
+    var cartVC : CartViewController?
    
     //MARK: -function
     override func viewDidLoad() {
@@ -33,10 +34,16 @@ final class DetailViewController: UIViewController {
         print("hello2")
         settingsDetail()
         getStar()
+
     }
     
     @IBAction func cartButtonClicked(_ sender: UIButton) {
-        print("sepete eklendi")
+        let check = cartVC!.hasIn(product: product!)
+        if check {
+            print("Zaten ekli")
+        }else {
+            print("ürün eklendi")
+        }
     }
     func settingsDetail() {
         if let product = product {

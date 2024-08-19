@@ -23,11 +23,19 @@ final class CartViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
-       let total = cartProduct.reduce(0) {$0 + $1.price}
+        let total = cartProduct.reduce(0) {$0 + $1.price}
         totalLabel.text = "Toplam tutar: \(total)$"
     }
     @IBAction func checkOutButtonClicked(_ sender: UIButton) {
     }
     
-
+    func hasIn(product:Product)->Bool {
+        if cartProduct.contains(product){
+            return true
+        }
+        else{
+            cartProduct.append(product)
+            return false
+        }
+    }
 }
