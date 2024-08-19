@@ -33,6 +33,13 @@ final class HomeViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = rightButton
         
     }
+    override func viewDidAppear(_ animated: Bool) {
+        if let cartVC = cartVC {
+            if cartVC.cartProduct.isEmpty {
+                rightButton!.image = UIImage(systemName: "cart")
+            }
+        }
+    }
     
     @objc func cartButtonClicked() {
         if let cartVC = cartVC {

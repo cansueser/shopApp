@@ -39,6 +39,7 @@ extension CartViewController : UITableViewDelegate,UITableViewDataSource {
             cartProduct.remove(at: indexPath.section)
             tableView.deleteSections(IndexSet(integer: indexPath.section), with: .automatic)
             totalPrice()
+            updateUI()
         }
     }
     

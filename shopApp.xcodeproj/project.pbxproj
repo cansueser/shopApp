@@ -22,6 +22,7 @@
 		7EA5A7592C6A320800BC7FF1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5A7582C6A320800BC7FF1 /* NetworkManager.swift */; };
 		7EA5A75B2C6A3B5C00BC7FF1 /* HomeViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5A75A2C6A3B5C00BC7FF1 /* HomeViewController+TableView.swift */; };
 		7EA5A75E2C6A480300BC7FF1 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5A75D2C6A480300BC7FF1 /* ProductTableViewCell.swift */; };
+		7EB3294D2C73B4770088D399 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3294C2C73B4770088D399 /* PaymentViewController.swift */; };
 		7EE03A882C6E42B000EE087A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7EE03A872C6E42B000EE087A /* Kingfisher */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		7EA5A7582C6A320800BC7FF1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7EA5A75A2C6A3B5C00BC7FF1 /* HomeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+TableView.swift"; sourceTree = "<group>"; };
 		7EA5A75D2C6A480300BC7FF1 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		7EB3294C2C73B4770088D399 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				7E8E357F2C6BA0D000F74C43 /* DetailViewController.swift */,
 				7E28382C2C71011C0097DD1F /* CartViewController.swift */,
 				7E28382E2C710BA30097DD1F /* CartViewController+TableView.swift */,
+				7EB3294C2C73B4770088D399 /* PaymentViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				7E28382F2C710BA30097DD1F /* CartViewController+TableView.swift in Sources */,
 				7E1C373D2C6A2CEB00E857FE /* HomeViewController.swift in Sources */,
 				7E1C37392C6A2CEB00E857FE /* AppDelegate.swift in Sources */,
+				7EB3294D2C73B4770088D399 /* PaymentViewController.swift in Sources */,
 				7EA5A75B2C6A3B5C00BC7FF1 /* HomeViewController+TableView.swift in Sources */,
 				7E1C373B2C6A2CEB00E857FE /* SceneDelegate.swift in Sources */,
 				7EA5A75E2C6A480300BC7FF1 /* ProductTableViewCell.swift in Sources */,
