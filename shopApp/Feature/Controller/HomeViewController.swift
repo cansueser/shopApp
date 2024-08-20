@@ -7,12 +7,11 @@
 
 import UIKit
 import Alamofire
+
 final class HomeViewController: UIViewController {
     //MARK: -variables
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var logoImageView: UIImageView!
-    
     @IBOutlet weak var categorySegment: UISegmentedControl!
     var products : [Product] = []
     var filteredProducts : [Product] = []
@@ -85,7 +84,6 @@ final class HomeViewController: UIViewController {
             filterProduct(category: "electronics")
         default:
             self.showAlert(title: "Hata", message: "Geçersiz kategori seçimi.")
-
         }
     }
     func filterProduct(category: String) {
@@ -97,6 +95,5 @@ final class HomeViewController: UIViewController {
         }
         tableView.reloadData()
     }
-    
 }
 

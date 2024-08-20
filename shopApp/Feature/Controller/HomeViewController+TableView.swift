@@ -11,7 +11,6 @@ import UIKit
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
-        
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return filteredProducts.count
@@ -43,5 +42,4 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         detailVC.cartVC = cartVC
         navigationController?.pushViewController(detailVC, animated: true)
     }
-    
 }

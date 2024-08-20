@@ -10,7 +10,6 @@ import Kingfisher
 
 final class DetailViewController: UIViewController {
     //MARK: -variables
-    
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -19,21 +18,17 @@ final class DetailViewController: UIViewController {
     @IBOutlet weak var detailView: UIView!
     @IBOutlet weak var star1: UIImageView!
     @IBOutlet weak var star3: UIImageView!
-
     @IBOutlet weak var star5: UIImageView!
     @IBOutlet weak var star4: UIImageView!
     @IBOutlet weak var star2: UIImageView!
-    
     @IBOutlet weak var rateCountLabel: UILabel!
     var product : Product?
     var cartVC : CartViewController?
-   
     //MARK: -function
     override func viewDidLoad() {
         super.viewDidLoad()
         settingsDetail()
         getStar()
-
     }
     
     @IBAction func cartButtonClicked(_ sender: UIButton) {
@@ -51,7 +46,6 @@ final class DetailViewController: UIViewController {
             descriptionLabel.text = product.description
             rateCountLabel.text = "(\(product.rating.count))"
         }
-        
         cartButton.layer.cornerRadius = 18
         detailView.layer.cornerRadius = 18
         productImageView.layer.cornerRadius = 18

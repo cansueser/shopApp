@@ -9,17 +9,16 @@ import UIKit
 
 final class PaymentViewController: UIViewController {
     //MARK: -variables
-    
     @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var totalPriceLabel: UILabel!
     @IBOutlet weak var discountPriceLabel: UILabel!
     @IBOutlet weak var PriceLabel: UILabel!
     @IBOutlet weak var applyButton: UIButton!
     @IBOutlet weak var couponTextField: UITextField!
-    
     @IBOutlet weak var couponCheck: UILabel!
     var price : Double?
     var discount : Double?
+    var cartVC : CartViewController?
     //MARK: -func
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +50,9 @@ final class PaymentViewController: UIViewController {
         let alert = UIAlertController(title: "İşlem Onayı",
                                       message: "İşlem onaylanıyor, emin misiniz?",
                                       preferredStyle: .alert)
-        
         let confirmAction = UIAlertAction(title: "Evet", style: .default) {_ in
             self.showAlert(title: "Başarılı", message: "Siparişiniz alınmıştır. İşlem başarılı.")
+            self.cartVC?.cartProduct.removeAll()
             self.navigationController?.popToRootViewController(animated: true)
         }
         let cancelAction = UIAlertAction(title: "İptal", style: .cancel) {_ in
@@ -61,10 +60,8 @@ final class PaymentViewController: UIViewController {
         alert.addAction(confirmAction)
         alert.addAction(cancelAction)
         self.present(alert,animated: true)
-      
     }
     func discountAmount() {
-        
         if let coupon = couponTextField.text{
             switch coupon{
             case "YAZ20":
@@ -77,7 +74,6 @@ final class PaymentViewController: UIViewController {
                 discount = 0
                 break
             }
-            
         }
     }
     func discountCalculate() ->Double{

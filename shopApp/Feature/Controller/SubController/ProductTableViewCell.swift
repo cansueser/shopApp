@@ -8,13 +8,10 @@
 import UIKit
 import Kingfisher
 
-class ProductTableViewCell: UITableViewCell {
-
+final class ProductTableViewCell: UITableViewCell {
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var productNameLabel: UILabel!
-    
-    
     @IBOutlet weak var cartButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,7 +24,5 @@ class ProductTableViewCell: UITableViewCell {
         priceLabel.text = "\(price)$"
         productImageView.kf.indicatorType = .activity
         productImageView.kf.setImage(with: URL(string: imageURL))
-        
     }
-    
 }

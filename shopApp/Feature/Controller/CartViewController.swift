@@ -12,7 +12,6 @@ final class CartViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var checkOutButton: UIButton!
-    
     @IBOutlet weak var emptyLabel: UIImageView!
     var cartProduct : [Product] = []
     var tempTotalPrice : Double?
@@ -34,7 +33,7 @@ final class CartViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let paymentVC = storyboard.instantiateViewController(identifier: "PaymentViewController") as! PaymentViewController
         paymentVC.price = tempTotalPrice
-        
+        paymentVC.cartVC = self
         navigationController?.pushViewController(paymentVC, animated: true)
     }
     

@@ -10,7 +10,6 @@ import Alamofire
 
 final class NetworkManager {
     static let shared = NetworkManager()
-    
     func request<T : Codable>(url : URL, method : HTTPMethod, completion : @escaping(Result<T, AFError>)->Void){
         AF.request(url,method:method).responseDecodable(of: T.self){
             response in
@@ -22,5 +21,4 @@ final class NetworkManager {
             }
         }
     }
-    
 }
