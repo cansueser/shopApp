@@ -30,6 +30,9 @@ final class CartViewController: UIViewController {
         totalPrice()
     }
     @IBAction func checkOutButtonClicked(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let paymentVC = storyboard.instantiateViewController(identifier: "PaymentViewController") as! PaymentViewController
+        navigationController?.pushViewController(paymentVC, animated: true)
     }
     
     func hasIn(product:Product)->Bool {

@@ -37,6 +37,8 @@ final class HomeViewController: UIViewController {
         if let cartVC = cartVC {
             if cartVC.cartProduct.isEmpty {
                 rightButton!.image = UIImage(systemName: "cart")
+            }else{
+                rightButton!.image = UIImage(systemName: "cart.fill")
             }
         }
     }
