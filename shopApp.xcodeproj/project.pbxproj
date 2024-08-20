@@ -23,6 +23,7 @@
 		7EA5A75B2C6A3B5C00BC7FF1 /* HomeViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5A75A2C6A3B5C00BC7FF1 /* HomeViewController+TableView.swift */; };
 		7EA5A75E2C6A480300BC7FF1 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5A75D2C6A480300BC7FF1 /* ProductTableViewCell.swift */; };
 		7EB3294D2C73B4770088D399 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3294C2C73B4770088D399 /* PaymentViewController.swift */; };
+		7EB4FAAF2C7528C800CFFF20 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB4FAAE2C7528C800CFFF20 /* UIViewController+Alert.swift */; };
 		7EE03A882C6E42B000EE087A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7EE03A872C6E42B000EE087A /* Kingfisher */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		7EA5A75A2C6A3B5C00BC7FF1 /* HomeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+TableView.swift"; sourceTree = "<group>"; };
 		7EA5A75D2C6A480300BC7FF1 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		7EB3294C2C73B4770088D399 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		7EB4FAAE2C7528C800CFFF20 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		7EA5A7562C6A307600BC7FF1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7EB4FAAE2C7528C800CFFF20 /* UIViewController+Alert.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				7E69CC882C6CF672007317A6 /* NetworkHelper.swift in Sources */,
 				7EA5A7592C6A320800BC7FF1 /* NetworkManager.swift in Sources */,
 				7E28382D2C71011C0097DD1F /* CartViewController.swift in Sources */,
+				7EB4FAAF2C7528C800CFFF20 /* UIViewController+Alert.swift in Sources */,
 				7E69CC8A2C6CF854007317A6 /* Product.swift in Sources */,
 				7E28382F2C710BA30097DD1F /* CartViewController+TableView.swift in Sources */,
 				7E1C373D2C6A2CEB00E857FE /* HomeViewController.swift in Sources */,

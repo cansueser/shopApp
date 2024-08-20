@@ -31,7 +31,6 @@ final class DetailViewController: UIViewController {
     //MARK: -function
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("hello2")
         settingsDetail()
         getStar()
 
@@ -40,9 +39,7 @@ final class DetailViewController: UIViewController {
     @IBAction func cartButtonClicked(_ sender: UIButton) {
         let check = cartVC!.hasIn(product: product!)
         if check {
-            print("Zaten ekli")
-        }else {
-            print("ürün eklendi")
+            self.showAlert(title: "Hata", message: "Eklemek istediğiniz ürün zaten sepette var.")
         }
     }
     func settingsDetail() {

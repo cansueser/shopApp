@@ -22,12 +22,9 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-
         cartVC = storyboard.instantiateViewController(identifier: "CartViewController")
-
         tableView.dataSource = self
         tableView.delegate = self
-        print("hello")
         fetchProducts()
         rightButton = UIBarButtonItem(image: UIImage(systemName: "cart"), style: .plain, target: self, action: #selector(cartButtonClicked))
         self.navigationItem.rightBarButtonItem = rightButton
@@ -54,9 +51,7 @@ final class HomeViewController: UIViewController {
         if let cartVC = cartVC {
             let check = cartVC.hasIn(product: products[sectionIndex])
             if check {
-                print("Zaten ekli")
-            }else {
-                print("ürün eklendi")
+                self.showAlert(title: "Hata", message: "Eklemek istediğiniz ürün zaten sepette var.")
             }
         }
     }
@@ -70,7 +65,7 @@ final class HomeViewController: UIViewController {
                     self.filteredProducts = self.products
                     self.tableView.reloadData()
                 case .failure(let error):
-                    print(error)
+                    self.showAlert(title: "Hata", message: "Bilinmeyen bir hata oluştu. Hata kodu: \(error)")
                 }
             }
         }
@@ -89,7 +84,8 @@ final class HomeViewController: UIViewController {
         case 4:
             filterProduct(category: "electronics")
         default:
-            print("error")
+            self.showAlert(title: "Hata", message: "Geçersiz kategori seçimi.")
+
         }
     }
     func filterProduct(category: String) {

@@ -11,7 +11,7 @@
         <!--Home Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="shopApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="shopApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -473,7 +473,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liI-3t-YRL">
-                                <rect key="frame" x="16" y="427" width="361" height="155"/>
+                                <rect key="frame" x="16" y="428" width="361" height="155"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toplam Tutar:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93H-1A-Jgt">
                                         <rect key="frame" x="8" y="117" width="128" height="27"/>
@@ -496,13 +496,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İndirimli Tutar:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzu-tH-2F6">
-                                        <rect key="frame" x="8" y="43" width="133" height="27"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İndirim Miktarı:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzu-tH-2F6">
+                                        <rect key="frame" x="8" y="43" width="139.33333333333334" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İndirimliFiyat" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chg-43-gx4">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chg-43-gx4">
                                         <rect key="frame" x="233" y="43" width="120" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="o0p-bw-yd0"/>
@@ -570,7 +570,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grs-nH-udH">
-                                <rect key="frame" x="69" y="672" width="255" height="60"/>
+                                <rect key="frame" x="69" y="673" width="255" height="60"/>
                                 <color key="backgroundColor" red="0.9704812169" green="0.8087403178" blue="0.27491995689999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="oxh-ni-BlH"/>
@@ -583,6 +583,12 @@
                                     <action selector="finishButtonClicked:" destination="0C3-Sp-hQg" eventType="touchUpInside" id="uhh-FZ-6TP"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kupon uygulandı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmL-xE-azE">
+                                <rect key="frame" x="16" y="377" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sTm-Kl-waE"/>
                         <color key="backgroundColor" red="0.97131830450000001" green="0.95874017479999996" blue="0.88617342710000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -596,18 +602,20 @@
                             <constraint firstItem="wv1-nv-gYl" firstAttribute="leading" secondItem="sTm-Kl-waE" secondAttribute="leading" constant="16" id="5DT-O8-AYy"/>
                             <constraint firstItem="sTm-Kl-waE" firstAttribute="trailing" secondItem="grs-nH-udH" secondAttribute="trailing" constant="69" id="A8O-J6-F9V"/>
                             <constraint firstItem="qXT-4x-wLX" firstAttribute="top" secondItem="YLg-rX-22g" secondAttribute="bottom" constant="40" id="Dth-8M-3ZX"/>
-                            <constraint firstItem="liI-3t-YRL" firstAttribute="top" secondItem="qXT-4x-wLX" secondAttribute="bottom" constant="60" id="FFu-0g-W6P"/>
                             <constraint firstItem="YLg-rX-22g" firstAttribute="leading" secondItem="sTm-Kl-waE" secondAttribute="leading" constant="16" id="K7l-1s-RtU"/>
                             <constraint firstItem="liI-3t-YRL" firstAttribute="leading" secondItem="sTm-Kl-waE" secondAttribute="leading" constant="16" id="KFy-O3-JXM"/>
                             <constraint firstItem="sTm-Kl-waE" firstAttribute="trailing" secondItem="wv1-nv-gYl" secondAttribute="trailing" constant="16" id="LgG-qG-tfi"/>
+                            <constraint firstItem="JmL-xE-azE" firstAttribute="top" secondItem="qXT-4x-wLX" secondAttribute="bottom" constant="10" id="N0R-kB-zyE"/>
                             <constraint firstItem="sTm-Kl-waE" firstAttribute="trailing" secondItem="HZL-c3-iq0" secondAttribute="trailing" constant="16" id="RU1-aC-z8I"/>
                             <constraint firstItem="TC7-pN-gNt" firstAttribute="leading" secondItem="YLg-rX-22g" secondAttribute="trailing" constant="5" id="RhR-fd-enO"/>
                             <constraint firstItem="w96-sr-tkO" firstAttribute="top" secondItem="wv1-nv-gYl" secondAttribute="bottom" constant="25" id="TF5-IZ-3QS"/>
                             <constraint firstItem="sTm-Kl-waE" firstAttribute="trailing" secondItem="4Zy-Zf-P2H" secondAttribute="trailing" constant="16" id="Wsx-jd-gXe"/>
                             <constraint firstItem="sTm-Kl-waE" firstAttribute="trailing" secondItem="w96-sr-tkO" secondAttribute="trailing" constant="16" id="ilH-FW-dd4"/>
                             <constraint firstItem="sTm-Kl-waE" firstAttribute="trailing" secondItem="liI-3t-YRL" secondAttribute="trailing" constant="16" id="jiw-wp-zUJ"/>
+                            <constraint firstItem="JmL-xE-azE" firstAttribute="leading" secondItem="sTm-Kl-waE" secondAttribute="leading" constant="16" id="kvT-Wf-dyS"/>
                             <constraint firstItem="4Zy-Zf-P2H" firstAttribute="leading" secondItem="sTm-Kl-waE" secondAttribute="leading" constant="16" id="mqW-P6-PTv"/>
                             <constraint firstItem="grs-nH-udH" firstAttribute="top" secondItem="liI-3t-YRL" secondAttribute="bottom" constant="90" id="mzA-4r-RVW"/>
+                            <constraint firstItem="liI-3t-YRL" firstAttribute="top" secondItem="JmL-xE-azE" secondAttribute="bottom" constant="30" id="uxZ-Pc-xw2"/>
                             <constraint firstItem="uIf-PE-dVE" firstAttribute="top" secondItem="sTm-Kl-waE" secondAttribute="top" id="vX8-sZ-WDQ"/>
                             <constraint firstItem="uIf-PE-dVE" firstAttribute="leading" secondItem="sTm-Kl-waE" secondAttribute="leading" constant="16" id="x2B-Rc-PUR"/>
                             <constraint firstItem="wv1-nv-gYl" firstAttribute="top" secondItem="4Zy-Zf-P2H" secondAttribute="bottom" constant="25" id="x5c-vY-s3G"/>
@@ -616,6 +624,7 @@
                     <connections>
                         <outlet property="PriceLabel" destination="ycv-px-14p" id="3CZ-Wr-oAl"/>
                         <outlet property="applyButton" destination="HZL-c3-iq0" id="QSG-2U-xWA"/>
+                        <outlet property="couponCheck" destination="JmL-xE-azE" id="7ii-9b-8Ht"/>
                         <outlet property="couponTextField" destination="qXT-4x-wLX" id="hLA-Zu-Jd3"/>
                         <outlet property="discountPriceLabel" destination="chg-43-gx4" id="2wm-Yr-lEz"/>
                         <outlet property="finishButton" destination="grs-nH-udH" id="XDW-Fc-LDU"/>
@@ -624,7 +633,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IvF-iP-GRl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3179" y="4"/>
+            <point key="canvasLocation" x="3177.8625954198474" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C0I-GR-Nwk">

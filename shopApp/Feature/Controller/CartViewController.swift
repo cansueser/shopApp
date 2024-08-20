@@ -15,6 +15,7 @@ final class CartViewController: UIViewController {
     
     @IBOutlet weak var emptyLabel: UIImageView!
     var cartProduct : [Product] = []
+    var tempTotalPrice : Double?
     // MARK: -func
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,8 @@ final class CartViewController: UIViewController {
     @IBAction func checkOutButtonClicked(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let paymentVC = storyboard.instantiateViewController(identifier: "PaymentViewController") as! PaymentViewController
+        paymentVC.price = tempTotalPrice
+        
         navigationController?.pushViewController(paymentVC, animated: true)
     }
     
@@ -48,6 +51,7 @@ final class CartViewController: UIViewController {
         if !cartProduct.isEmpty {
             let total = cartProduct.reduce(0) {$0 + $1.price}
             totalLabel.text = "Toplam tutar: \(total)$"
+            tempTotalPrice = total
         }
     }
     func updateUI() {
